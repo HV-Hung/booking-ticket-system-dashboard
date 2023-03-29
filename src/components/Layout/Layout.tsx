@@ -38,16 +38,16 @@ const Layout: React.FC = () => {
     token: { colorBgContainer },
   } = theme.useToken();
 
-  useEffect(() => {
-    checkAuthStatus().then((authenticated) => {
-      setIsAuthenticated(authenticated);
-      if (!authenticated) navigate("login");
-    });
-  }, []);
+  // useEffect(() => {
+  //   checkAuthStatus().then((authenticated) => {
+  //     setIsAuthenticated(authenticated);
+  //     if (!authenticated) navigate("login");
+  //   });
+  // }, []);
 
   return (
     <div>
-      {isAuthenticated ? (
+      {true ? (
         <AntLayout style={{ minHeight: "100vh" }}>
           <Sider
             collapsible
